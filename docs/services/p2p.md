@@ -10,7 +10,7 @@ This service also provides the publisher interface on bitcore-node bus architect
 ```json
 "p2p": {
   "peers": [
-  { "ip": { "v4": "127.0.0.1" }, "port": 8333 }
+  { "ip": { "v4": "127.0.0.1" }, "port": 33333 }
   ]
 }
 ```
