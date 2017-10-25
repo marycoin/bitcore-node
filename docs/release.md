@@ -1,6 +1,6 @@
 # Release Process
 
-Binaries for marycoind are distributed for convenience and built deterministically with Gitian, signatures for marycoind are located at the [gitian.sigs](https://github.com/bitpay/gitian.sigs) respository.
+Binaries for bitcoind are distributed for convenience and built deterministically with Gitian, signatures for bitcoind are located at the [gitian.sigs](https://github.com/bitpay/gitian.sigs) respository.
 
 ## How to Release
 

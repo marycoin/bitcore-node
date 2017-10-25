@@ -1,6 +1,6 @@
 # Fee Service
 
-The fee service is a requirement of the insight-api service (not a bitcore-node built-in service). Its primary purpose is to query a Marycoin full node for the most up-to-date miner fees for transactions. A Marycoin full node such as [BTC1](https://github.com/btc1/bitcoin) or [bcoin](https://github.com/bcoin-org/bcoin) with an available RPC interface is required.
+The fee service is a requirement of the insight-api service (not a bitcore-node built-in service). Its primary purpose is to query a bitcoin full node for the most up-to-date miner fees for transactions. A bitcoin full node such as [BTC1](https://github.com/btc1/bitcoin) or [bcoin](https://github.com/bcoin-org/bcoin) with an available RPC interface is required.
 
 ## Service Configuration
 

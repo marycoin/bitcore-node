@@ -1,16 +1,16 @@
 {
   "name": "bitcore-node",
-  "description": "Full node with extended capabilities using Bitcore and Marycoin Core",
+  "description": "Full node with extended capabilities using Bitcore and Bitcoin Core",
   "engines": {
     "node": ">=8.0.0"
   },
   "author": "BitPay <dev@bitpay.com>",
-  "version": "5.0.0-beta.22",
+  "version": "5.0.0-beta.25",
   "main": "./index.js",
-  "repository": "https://github.com/marycoin/bitcore-node.git",
-  "homepage": "https://github.com/marycoin/bitcore-node",
+  "repository": "git://github.com/bitpay/bitcore-node.git",
+  "homepage": "https://github.com/bitpay/bitcore-node",
   "bugs": {
-    "url": "https://github.com/marycoin/bitcore-node/issues"
+    "url": "https://github.com/bitpay/bitcore-node/issues"
   },
   "bin": {
     "bitcore-node": "./bin/bitcore-node"
@@ -19,18 +19,18 @@
     "test": "NODE_ENV=test mocha -R spec --recursive test"
   },
   "tags": [
-    "marycoin",
-    "marycoind",
+    "bitcoin",
+    "bitcoind",
     "bcoin",
-    "marycoin full node",
-    "marycoin index",
+    "bitcoin full node",
+    "bitcoin index",
     "block explorer",
     "wallet backend"
   ],
   "dependencies": {
     "async": "^2.5.0",
     "bcoin": "bitpay/bcoin#v1.0.0-beta.14+cash",
-    "marycoind-rpc": "^0.6.0",
+    "bitcoind-rpc": "^0.6.0",
     "bitcore-lib": "5.0.0-beta.1",
     "bitcore-p2p": "5.0.0-beta.1",
     "bn.js": "^4.11.8",

@@ -15,16 +15,16 @@ A node represents a collection of services that are loaded together. For more in
 ```js
 
 var index = require('bitcore-node');
-var Marycoin = index.services.Marycoin;
+var Bitcoin = index.services.Bitcoin;
 var Node = index.Node;
 
 var configuration = {
-  datadir: '/home/user/.marycoin',
+  datadir: '/home/user/.bitcoin',
   network: 'testnet',
   services: [
     {
-      name: 'marycoind',
-      module: Marycoin,
+      name: 'bitcoind',
+      module: Bitcoin,
       config: {}
     }
   ]
@@ -37,7 +37,7 @@ node.start(function() {
 });
 
 node.on('ready', function() {
-  console.log('Marycoin Node Ready');
+  console.log('Bitcoin Node Ready');
 });
 
 node.on('error', function(err) {

@@ -1,6 +1,6 @@
 # Transaction Service
 
-The transaction service provides a transaction index for the Marycoin blockchain. Specifically, it builds and maintains the following information about every transaction on the Marycoin network:
+The transaction service provides a transaction index for the Bitcoin blockchain. Specifically, it builds and maintains the following information about every transaction on the Bitcoin network:
 
 - transaction ids and transactions
 - input values for every transaction

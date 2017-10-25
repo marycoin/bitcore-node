@@ -18,14 +18,14 @@ git clone git@github.com:<yourusername>/bitcore-node.git
 git clone git@github.com:<yourusername>/bitcore-lib.git
 ```
 
-To develop marycoin or to compile from source:
+To develop bitcoin or to compile from source:
 
 ```bash
-git clone git@github.com:<yourusername>/marycoin.git
+git clone git@github.com:<yourusername>/bitcoin.git
 git fetch origin <branchname>:<branchname>
 git checkout <branchname>
 ```
-**Note**: See marycoin documentation for building marycoin on your platform.
+**Note**: See bitcoin documentation for building bitcoin on your platform.
 
 
 ## Install Development Dependencies
@@ -51,7 +51,7 @@ npm install
 cd ../bitcore-node
 npm install
 ```
-**Note**: If you get a message about not being able to download marycoin distribution, you'll need to compile marycoind from source, and setup your configuration to use that version.
+**Note**: If you get a message about not being able to download bitcoin distribution, you'll need to compile bitcoind from source, and setup your configuration to use that version.
 
 
 We now will setup symlinks in `bitcore-node` *(repeat this for any other modules you're planning on developing)*:
@@ -59,14 +59,14 @@ We now will setup symlinks in `bitcore-node` *(repeat this for any other modules
 cd node_modules
 rm -rf bitcore-lib
 ln -s ~/bitcore-lib
-rm -rf marycoind-rpc
-ln -s ~/marycoind-rpc
+rm -rf bitcoind-rpc
+ln -s ~/bitcoind-rpc
 ```
 
-And if you're compiling or developing marycoin:
+And if you're compiling or developing bitcoin:
 ```bash
 cd ../bin
-ln -sf ~/marycoin/src/marycoind
+ln -sf ~/bitcoin/src/bitcoind
 ```
 
 ## Run Tests
@@ -85,12 +85,12 @@ npm run test
 
 To run a specific unit test in watch mode:
 ```bash
-mocha -w -R spec test/services/marycoind.unit.js
+mocha -w -R spec test/services/bitcoind.unit.js
 ```
 
 To run a specific regtest:
 ```bash
-mocha -R spec regtest/marycoind.js
+mocha -R spec regtest/bitcoind.js
 ```
 
 ## Running a Development Node
@@ -112,17 +112,17 @@ Edit `bitcore-node.json` with something similar to:
   "network": "livenet",
   "port": 3001,
   "services": [
-    "marycoind",
+    "bitcoind",
     "web",
     "insight-api",
     "insight-ui",
     "<additional_service>"
   ],
   "servicesConfig": {
-    "marycoind": {
+    "bitcoind": {
       "spawn": {
-        "datadir": "/home/<youruser>/.marycoin",
-        "exec": "/home/<youruser>/marycoin/src/marycoind"
+        "datadir": "/home/<youruser>/.bitcoin",
+        "exec": "/home/<youruser>/bitcoin/src/bitcoind"
       }
     }
   }
@@ -141,7 +141,7 @@ ln -s ~/insight-api
 ln -s ~/insight-ui
 ```
 
-Make sure that the `<datadir>/marycoin.conf` has the necessary settings, for example:
+Make sure that the `<datadir>/bitcoin.conf` has the necessary settings, for example:
 ```
 server=1
 whitelist=127.0.0.1
@@ -152,7 +152,7 @@ spentindex=1
 zmqpubrawtx=tcp://127.0.0.1:28332
 zmqpubhashblock=tcp://127.0.0.1:28332
 rpcallowip=127.0.0.1
-rpcuser=marycoin
+rpcuser=bitcoin
 rpcpassword=local321
 ```
 

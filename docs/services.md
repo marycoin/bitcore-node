@@ -10,7 +10,7 @@ The `bitcore-node.json` file describes which services will load for a node:
 ```json
 {
   "services": [
-    "marycoind", "web"
+    "bitcoind", "web"
   ]
 }
 ```
@@ -37,19 +37,19 @@ If, instead, you would like to run a custom node, you can include services by in
 var bitcore = require('bitcore-node');
 
 //Services
-var Marycoin = bitcore.services.Marycoin;
+var Bitcoin = bitcore.services.Bitcoin;
 var Web = bitcore.services.Web;
 
 var myNode = new bitcore.Node({
   network: 'regtest'
   services: [
     {
-      name: 'marycoind',
-      module: Marycoin,
+      name: 'bitcoind',
+      module: Bitcoin,
       config: {
         spawn: {
-          datadir: '/home/<username>/.marycoin',
-          exec: '/home/<username>/bitcore-node/bin/marycoind'
+          datadir: '/home/<username>/.bitcoin',
+          exec: '/home/<username>/bitcore-node/bin/bitcoind'
         }
       }
     },
@@ -67,7 +67,7 @@ var myNode = new bitcore.Node({
 Now that you've loaded your services you can access them via `myNode.services.<service-name>.<method-name>`. For example if you wanted to check the balance of an address, you could access the address service like so.
 
 ```js
-myNode.services.marycoind.getAddressBalance('1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v', false, function(err, total) {
+myNode.services.bitcoind.getAddressBalance('1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v', false, function(err, total) {
   console.log(total.balance); //Satoshi amount of this address
 });
 ```
